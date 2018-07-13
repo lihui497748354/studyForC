@@ -1,0 +1,2 @@
+# studyForC
+c/c++
