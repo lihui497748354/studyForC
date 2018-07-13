@@ -22,7 +22,7 @@ int getNextRandomValue(void) {
 	srand((unsigned)time(NULL));
 	return rand();
 }
-
+//I/O流错误
 void testIOAndException() {
 	FILE *fp;
 	extern int errno;
@@ -36,4 +36,24 @@ void testIOAndException() {
 	}else{
 		fclose(fp);
 	}
+}
+//除数为0
+int divisorByZero() {
+	int dividend = 20;
+	int divisor = 4;
+	int result;
+	if (!divisor){
+		fprintf(stderr, "除数为 0 推出运算...\n");
+		return -1;
+	}
+	result = dividend / divisor;
+	fprintf(stderr, "result = %d\n", result);
+	return 0;
+}
+//数的阶乘
+double factorial(size_t i) {
+	if (i <= 1){
+		return 1;
+	}
+	return i * factorial(i - 1);
 }

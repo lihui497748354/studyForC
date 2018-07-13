@@ -18,8 +18,20 @@ int main() {
 		printf("%d\n", myarray[i]);
 	}
 	*/
+	//testIOAndException();
+	/*
+	int result = divisorByZero();
+	if (result){
+		printf("运算失败\n");
+		exit(EXIT_FAILURE);
+	}else {
+		printf("运算完成\n");
+	}
+	*/
+	//数的阶乘
+	double result = factorial(10);
+	printf("%.2lf \n", result);
 
-	testIOAndException();
 	system("pause");
 	return EXIT_SUCCESS;
 }

@@ -16,4 +16,10 @@ int getNextRandomValue(void);
 //I/O流，并且错误处理
 void testIOAndException();
 
+//被0除的错误
+int divisorByZero();
+
+//数的阶乘
+double factorial(size_t i);
+
 #endif // !_H_STUDY_HEAD_
