@@ -22,4 +22,10 @@ int divisorByZero();
 //数的阶乘
 double factorial(size_t i);
 
+//可变参数  stdarg.h
+double func(int num,...);
+
+//动态分配内存
+void dynamiCmemoryAllocation();
+
 #endif // !_H_STUDY_HEAD_

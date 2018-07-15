@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "学习头文件.h"
 
-int main() {
+int mainC() {
 
 	//printf("hello  quan quan \n");
 	/*
@@ -28,10 +28,16 @@ int main() {
 		printf("运算完成\n");
 	}
 	*/
-	//数的阶乘
+	/*
+	数的阶乘
 	double result = factorial(10);
 	printf("%.2lf \n", result);
+	printf("Average of 2, 3, 4, 5 = %.2f\n", func(4, 2, 3, 4, 5));
+	动态分配内存
+	*/
 
+	dynamiCmemoryAllocation();
+	
 	system("pause");
 	return EXIT_SUCCESS;
 }

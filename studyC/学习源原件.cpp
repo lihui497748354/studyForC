@@ -4,6 +4,7 @@
 #include <time.h>
 #include <errno.h>
 #include <string.h>
+#include <stdarg.h>
 #include "学习头文件.h"
 
 //指针函数(使用指针调用函数)
@@ -43,7 +44,7 @@ int divisorByZero() {
 	int divisor = 4;
 	int result;
 	if (!divisor){
-		fprintf(stderr, "除数为 0 推出运算...\n");
+		fprintf(stderr, "除数为 0 退出运算...\n");
 		return -1;
 	}
 	result = dividend / divisor;
@@ -56,4 +57,44 @@ double factorial(size_t i) {
 		return 1;
 	}
 	return i * factorial(i - 1);
+}
+
+//可变参数
+double func(int num, ...) {
+	va_list valist;
+	double sum = 0.0;
+	//为num个参数初始化valist
+	va_start(valist, num);
+	//访问所有赋给valist得参数
+	for (int i = 0; i < num; i++) {
+		sum += va_arg(valist,int);
+	}
+	//清理为 valist 保留的内存
+	va_end(valist);
+	return sum / num;
+}
+
+//动态内存分配
+void dynamiCmemoryAllocation() {
+	char name[100];
+	char *description;
+	strcpy(name, "Zara Ali");
+	//动态分配内存
+	description = (char*)malloc(sizeof(char) * 30);
+	//description = (char*)calloc(30, sizeof(char));
+	if (description == NULL) {
+		fprintf(stderr,"Error - unable to allocate required memory\n");
+	}else {
+		strcpy(description, "Zara ali a DPS student.");
+	}
+	//假设需要更大的描述信息
+	description = (char*)realloc(description, sizeof(char) * 100);
+	if (description == NULL){
+		fprintf(stderr, "Error - unable to allocate required memory\n");
+	}else{
+		strcat(description, "She is in class 10th");
+	}
+	printf("Name = %s\n", name);
+	printf("Description: %s\n", description);
+	free(description);
 }
