@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "学习头文件.h"
 
-int mainC() {
+int main() {
 
 	//printf("hello  quan quan \n");
 	/*
