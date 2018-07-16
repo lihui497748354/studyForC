@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "studyC", "studyC\studyC.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C加加基础", "C加加基础\C加加基础.vcxproj", "{640B7E34-71E6-45DA-A033-2CA09A5698AC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "文件和流", "文件和流\文件和流.vcxproj", "{663CA98F-2A74-4E2A-A4AC-0E0303DBA63C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{640B7E34-71E6-45DA-A033-2CA09A5698AC}.Release|x64.Build.0 = Release|x64
 		{640B7E34-71E6-45DA-A033-2CA09A5698AC}.Release|x86.ActiveCfg = Release|Win32
 		{640B7E34-71E6-45DA-A033-2CA09A5698AC}.Release|x86.Build.0 = Release|Win32
+		{663CA98F-2A74-4E2A-A4AC-0E0303DBA63C}.Debug|x64.ActiveCfg = Debug|x64
+		{663CA98F-2A74-4E2A-A4AC-0E0303DBA63C}.Debug|x64.Build.0 = Debug|x64
+		{663CA98F-2A74-4E2A-A4AC-0E0303DBA63C}.Debug|x86.ActiveCfg = Debug|Win32
+		{663CA98F-2A74-4E2A-A4AC-0E0303DBA63C}.Debug|x86.Build.0 = Debug|Win32
+		{663CA98F-2A74-4E2A-A4AC-0E0303DBA63C}.Release|x64.ActiveCfg = Release|x64
+		{663CA98F-2A74-4E2A-A4AC-0E0303DBA63C}.Release|x64.Build.0 = Release|x64
+		{663CA98F-2A74-4E2A-A4AC-0E0303DBA63C}.Release|x86.ActiveCfg = Release|Win32
+		{663CA98F-2A74-4E2A-A4AC-0E0303DBA63C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
