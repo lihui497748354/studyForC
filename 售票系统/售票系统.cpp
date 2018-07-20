@@ -8,7 +8,7 @@ DWORD WINAPI SaleTicket(LPVOID lpParameter) {
 	TICKET* pSaleData = pThreadData->ticket;
 	while (pSaleData->nCount > 0) {
 		//请求获得一个互斥锁
-		WaitForSingleObject(g_hMutex,INFINITE);
+		//WaitForSingleObject(g_hMutex,INFINITE);
 		if (pSaleData->nCount > 0) {
 			cout << pThreadData->strThreadName << "出售第" << pSaleData->nCount << "的票,";
 			if (pSaleData->nCount >= 0) {
@@ -19,7 +19,7 @@ DWORD WINAPI SaleTicket(LPVOID lpParameter) {
 		}
 		Sleep(10);
 		//释放互斥锁
-		ReleaseMutex(g_hMutex);
+		//ReleaseMutex(g_hMutex);
 	}
 	return 0L;
 }

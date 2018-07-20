@@ -8,7 +8,7 @@ using namespace std;
 int main() {
 
 	//创建一个互斥锁
-	g_hMutex = CreateMutex(NULL, FALSE, NULL);
+	//g_hMutex = CreateMutex(NULL, FALSE, NULL);
 	//初始化火车票
 	TICKET ticket;
 	ticket.nCount = 100;
@@ -25,10 +25,10 @@ int main() {
 		//创建线程
 		handle[i] = CreateThread(NULL, 0, SaleTicket, &thdData[i], 0, NULL);
 		//请求获取一个互斥锁
-		WaitForSingleObject(g_hMutex, INFINITE);
+		//WaitForSingleObject(g_hMutex, INFINITE);
 		cout << thdData[i].strThreadName << "开始出售" << ticket.strTicketName << "的票" << endl;
 		//释放互斥锁
-		ReleaseMutex(g_hMutex);
+		//ReleaseMutex(g_hMutex);
 		CloseHandle(handle[i]);
 	}
 
